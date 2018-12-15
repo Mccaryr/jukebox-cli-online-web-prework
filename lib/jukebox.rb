@@ -12,7 +12,11 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
+<<<<<<< HEAD
 def help()
+=======
+def help
+>>>>>>> 8637871be6227ec7f74c8090c29b2778d37112c7
   puts "I accept the following commands:
   -help : displays this help message
   -list : displays a list of songs you can play
@@ -27,6 +31,7 @@ def list(songs)
 end
 
 def play(songs)
+<<<<<<< HEAD
   puts "Please enter a song name or number:"
   user_input = gets.chomp
   songFound = false
@@ -40,10 +45,24 @@ def play(songs)
   if songFound == false
     puts "Invalid input, please try again"
   end
+=======
+  # puts "Please enter a song name or number:"
+  user_input = gets.chomp
+  puts "#{user_input}"
+  songs.each_with_index do |song, index|
+    if "#{song}" == "#{user_input}" || "#{index+1}" == "#{user_input}"
+      puts "#{song}"
+    else
+      return "Invalid input, please try again"
+
+    end
+  end
+>>>>>>> 8637871be6227ec7f74c8090c29b2778d37112c7
 end
 
 def exit_jukebox
   puts "Goodbye"
+<<<<<<< HEAD
   exit()
 end
 
@@ -58,3 +77,6 @@ end
 # elsif "#{input}" == "exit"
 #   exit_jukebox()
 # end
+=======
+end
+>>>>>>> 8637871be6227ec7f74c8090c29b2778d37112c7
